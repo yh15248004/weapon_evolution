@@ -6,7 +6,7 @@ function PlayerPk(playerOne, playerTwo) {
 PlayerPk.prototype.pk = function() {
   var message = '';
 
-  for (var i = 0; i < this.playerOne.hp; i++) {
+  while(true) {
 
     this.playerOne.hp -= this.playerTwo.attack - this.playerOne.getArmorDef();
     message += this.playerTwo.occupation + this.playerTwo.name + '攻击了' +
