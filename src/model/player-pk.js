@@ -8,17 +8,18 @@ PlayerPk.prototype.pk = function() {
 
   for (var i = 0; i < this.playerOne.hp; i++) {
 
-    this.playerOne.hp -= this.playerTwo.attack;
-    message += this.playerTwo.name + '攻击了' +
-      this.playerOne.name + ','+ this.playerOne.name +
-      '受到了' + this.playerTwo.attack + '点伤害，' +
-      this.playerOne.name + '生命值还剩' + this.playerOne.hp + '\n';
+    this.playerOne.hp -= this.playerTwo.attack - this.playerOne.getArmorDef();
+    message += this.playerTwo.occupation + this.playerTwo.name + '攻击了' +
+               this.playerOne.occupation + this.playerOne.name +','+ this.playerOne.name +
+               '受到了' + (this.playerTwo.attack - this.playerOne.getArmorDef()) + '点伤害，' +
+               this.playerOne.name + '剩余生命：' + this.playerOne.hp + '\n';
 
-    this.playerTwo.hp -= this.playerOne.attack;
-    message += this.playerOne.name + '攻击了' +
-      this.playerTwo.name + ','+ this.playerTwo.name +
-      '受到了' + this.playerOne.attack + '点伤害，' +
-      this.playerTwo.name + '生命值还剩' + this.playerTwo.hp + '\n';
+    this.playerTwo.hp -= this.playerOne.attack + this.playerOne.getWeaponAttack();
+    message += this.playerOne.occupation + this.playerOne.name + '用' + this.playerOne.getWeaponName() +
+               '攻击了' + this.playerTwo.occupation + this.playerTwo.name + ',' +
+               this.playerTwo.name + '受到了' +
+               (this.playerOne.attack + this.playerOne.getWeaponAttack()) + '点伤害，' +
+               this.playerTwo.name + '剩余生命：' + this.playerTwo.hp + '\n';
 
     if (this.playerOne.hp <= 0) {
       message += this.playerOne.name + '被打败了！';
