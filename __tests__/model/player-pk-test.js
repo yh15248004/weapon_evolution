@@ -15,8 +15,8 @@ describe('PlayerPk', function() {
     Armor = require('../../src/model/armor');
     qualityStick = new Weapon('优质的木棒', 8);
     bronzeArmor = new Armor('青铜铠甲', 4);
-    playerOne = new Soldier('张三','战士',50,9,qualityStick,bronzeArmor);
-    playerTwo = new Player('李四','普通人',49,8);
+    playerOne = new Soldier('张三', '战士', 50, 9, qualityStick, bronzeArmor);
+    playerTwo = new Player('李四', '普通人', 49, 8);
 
     playerPk = new PlayerPk(playerOne, playerTwo);
   });

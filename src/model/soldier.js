@@ -1,6 +1,7 @@
 var Player = require('./player');
 function Soldier (name, occupation, hp, attack, weapon, armor) {
   Player.call(this, name, occupation, hp, attack, weapon, armor);
+
 }
 
 Soldier.prototype = Object.create(Player.prototype);
@@ -26,7 +27,7 @@ Soldier.prototype.getAttackPoint = function() {
   return this.weapon.attack + this.attack;
 };
 
-Player.prototype.getDefPoint = function() {
+Soldier.prototype.getDefPoint = function() {
   return this.armor.def;
 };
 
