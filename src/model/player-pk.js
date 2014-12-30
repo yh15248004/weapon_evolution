@@ -48,7 +48,7 @@ PlayerPk.prototype.pkTexts = function() {
 };
 
 PlayerPk.prototype.getPlayerOneNewHp = function() {
-  this.playerOne.hp -= this.playerTwo.attack - this.playerOne.getArmorDef();
+  this.playerOne.hp -= this.playerTwo.getAttackPoint() - this.playerOne.getDefPoint();
   return this.playerOne.hp;
 };
 

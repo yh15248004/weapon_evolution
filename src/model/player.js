@@ -24,8 +24,11 @@ Player.prototype.getArmorDef = function() {
 };
 
 Player.prototype.getAttackPoint = function() {
-  return this.weapon.attack + this.attack;
+  return this.attack;
 };
 
+Player.prototype.getDefPoint = function() {
+  return 0;
+};
 
 module.exports = Player;

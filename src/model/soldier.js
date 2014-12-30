@@ -26,4 +26,8 @@ Soldier.prototype.getAttackPoint = function() {
   return this.weapon.attack + this.attack;
 };
 
+Player.prototype.getDefPoint = function() {
+  return this.armor.def;
+};
+
 module.exports = Soldier;
