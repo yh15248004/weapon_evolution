@@ -30,6 +30,7 @@ PlayerPk.prototype.pk = function() {
 };
 
 PlayerPk.prototype.pkTexts = function() {
+
   var playerOneText = this.playerTwo.occupation + this.playerTwo.name + '攻击了' +
                       this.playerOne.occupation + this.playerOne.name +','+ this.playerOne.name +
                       '受到了' + (this.playerTwo.attack - this.playerOne.getArmorDef()) + '点伤害，' +
@@ -43,6 +44,7 @@ PlayerPk.prototype.pkTexts = function() {
   var playerText = [playerOneText, playerTwoText];
 
   return playerText;
+  
 };
 
 module.exports = PlayerPk;
