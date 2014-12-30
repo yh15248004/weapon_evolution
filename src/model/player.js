@@ -47,4 +47,7 @@ Player.prototype.getIsPoisoning = function() {
   return false;
 };
 
+Player.prototype.getIsOblaze = function() {
+  return false;
+};
 module.exports = Player;

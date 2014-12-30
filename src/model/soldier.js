@@ -61,4 +61,12 @@ Soldier.prototype.getIsPoisoning = function() {
   return result;
 };
 
+Soldier.prototype.getIsOblaze = function() {
+  var result = false;
+  if (this.weapon.isOblaze()) {
+    result = true;
+  }
+  return result;
+};
+
 module.exports = Soldier;

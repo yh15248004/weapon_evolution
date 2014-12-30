@@ -45,6 +45,8 @@ PlayerPk.prototype.pkText = function(attacker, defencer) {
 
   result += defencer.name + '剩余生命：' + defencer.hp;
 
+  //result += this.getExistDamageText(attacker, defencer);
+
   return result;
 };
 
@@ -61,6 +63,10 @@ PlayerPk.prototype.getSpecialDamageText = function(attacker, defencer) {
   if (attacker.getIsPoisoning()) {
     result = defencer.name + '中毒了,';
   }
+  if (attacker.getIsOblaze()) {
+    result = defencer.name + '着火了,';
+  }
+
   return result;
 };
 

@@ -72,4 +72,24 @@ describe('Weapon', function() {
 
   });
 
+  describe('#isOblaze()', function() {
+
+    it('should return correct boolean', function() {
+      var weapon = new Weapon('xuanyuan', 20, new Effect('着火', 1));
+
+      var result = weapon.isOblaze();
+
+      expect(result).toBe(true);
+    });
+
+    it('should return correct boolean', function() {
+      var weapon = new Weapon('xuanyuan', 20, new Effect('着火', 0));
+
+      var result = weapon.isOblaze();
+
+      expect(result).toBe(false);
+    });
+
+  });
+
 });

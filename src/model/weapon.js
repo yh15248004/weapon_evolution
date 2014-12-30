@@ -30,4 +30,14 @@ Weapon.prototype.isPoisoning = function() {
   return result;
 };
 
+Weapon.prototype.isOblaze = function() {
+  var result = false;
+
+  if (this.effect.probability * 100 > _.random(0, 99) && this.effect.name === '着火') {
+    result = true;
+  }
+
+  return result;
+};
+
 module.exports = Weapon;
