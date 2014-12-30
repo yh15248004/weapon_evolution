@@ -1,11 +1,10 @@
+var Player = require('./player');
 function Soldier (name, occupation, hp, attack, weapon, armor) {
-  this.name = name;
-  this.occupation = occupation;
-  this.hp = hp;
-  this.attack = attack;
-  this.weapon = weapon || null;
-  this.armor = armor || null;
+  Player.call(this, name, occupation, hp, attack, weapon, armor);
 }
+
+Soldier.prototype = Object.create(Player.prototype);
+Soldier.prototype.constructor = Soldier;
 
 Soldier.prototype.getWeaponName = function() {
   return this.weapon.name;
