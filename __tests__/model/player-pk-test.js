@@ -4,21 +4,26 @@ jest.dontMock('../../src/model/weapon');
 jest.dontMock('../../src/model/armor');
 
 describe('PlayerPk', function() {
+  var Player,PlayerPk,Weapon,Armor,qualityStick,bronzeArmor,playerOne,playerTwo,playerPk;
+
+  beforeEach(function() {
+    Player = require('../../src/model/player');
+    PlayerPk = require('../../src/model/player-pk');
+    Weapon = require('../../src/model/weapon');
+    Armor = require('../../src/model/armor');
+    qualityStick = new Weapon('优质的木棒', 8);
+    bronzeArmor = new Armor('青铜铠甲', 4);
+    playerOne = new Player('张三','战士',50,9,qualityStick,bronzeArmor);
+    playerTwo = new Player('李四','普通人',49,8);
+
+    playerPk = new PlayerPk(playerOne, playerTwo);
+  });
 
   describe('#pk()', function() {
 
     it('should return correct text', function() {
 
-      var Player = require('../../src/model/player');
-      var PlayerPk = require('../../src/model/player-pk');
-      var Weapon = require('../../src/model/weapon');
-      var Armor = require('../../src/model/armor');
-      var qualityStick = new Weapon('优质的木棒', 8);
-      var bronzeArmor = new Armor('青铜铠甲', 4);
-      var playerOne = new Player('张三','战士',50,9,qualityStick,bronzeArmor);
-      var playerTwo = new Player('李四','普通人',49,8);
 
-      var playerPk = new PlayerPk(playerOne, playerTwo);
       var result = playerPk.pk();
 
       expect(result).toBe(
@@ -34,5 +39,15 @@ describe('PlayerPk', function() {
     });
 
   });
+
+  // describe('#pkTexts()', function() {
+  //   it('should return correct array', function() {
+  //
+  //     var result = playerPk.pkTexts();
+  //
+  //     expect(result).toB
+  //
+  //   });
+  // });
 
 });
