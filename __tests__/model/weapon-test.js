@@ -40,6 +40,14 @@ describe('Weapon', function() {
       expect(result).toBe(true);
     });
 
+    it('should return correct boolean', function() {
+      weapon = new Weapon('xuanyuan', 20, new Effect('致命一击', 0));
+
+      var result = weapon.isTrigger();
+
+      expect(result).toBe(false);
+    });
+
   });
 
 });
