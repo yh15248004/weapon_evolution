@@ -1,6 +1,6 @@
 jest.dontMock('../../src/model/armor');
 
-describe('PlayerPk', function() {
+describe('Armor', function() {
   var Armor;
   var armor;
   beforeEach(function() {
