@@ -1,4 +1,4 @@
-function Player(name, occupation, hp, attack, weapon, armor) {
+function Soldier (name, occupation, hp, attack, weapon, armor) {
   this.name = name;
   this.occupation = occupation;
   this.hp = hp;
@@ -7,25 +7,24 @@ function Player(name, occupation, hp, attack, weapon, armor) {
   this.armor = armor || null;
 }
 
-Player.prototype.getWeaponName = function() {
+Soldier.prototype.getWeaponName = function() {
   return this.weapon.name;
 };
 
-Player.prototype.getWeaponAttack = function() {
+Soldier.prototype.getWeaponAttack = function() {
   return this.weapon.attack;
 };
 
-Player.prototype.getArmorName = function() {
+Soldier.prototype.getArmorName = function() {
   return this.armor.name;
 };
 
-Player.prototype.getArmorDef = function() {
+Soldier.prototype.getArmorDef = function() {
   return this.armor.def;
 };
 
-Player.prototype.getAttackPoint = function() {
+Soldier.prototype.getAttackPoint = function() {
   return this.weapon.attack + this.attack;
 };
 
-
-module.exports = Player;
+module.exports = Soldier;

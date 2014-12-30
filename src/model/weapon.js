@@ -1,6 +1,7 @@
-function Weapon(name, attack) {
+function Weapon(name, attack, effects) {
   this.name = name;
   this.attack = attack;
+  this.effects = effects || [];
 }
 Weapon.prototype.getWeaponName = function() {
   return this.name;

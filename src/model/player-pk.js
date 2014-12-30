@@ -53,6 +53,7 @@ PlayerPk.prototype.getPlayerOneNewHp = function() {
 };
 
 PlayerPk.prototype.getPlayerTwoNewHp = function() {
+  //this.playerOne.hp -= this.playerTwo.attack - this.playerOne.getArmorDef();
   this.playerTwo.hp -= this.playerOne.attack + this.playerOne.getWeaponAttack();
   return this.playerTwo.hp;
 };
