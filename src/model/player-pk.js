@@ -30,6 +30,9 @@ PlayerPk.prototype.pk = function() {
 PlayerPk.prototype.pkText = function(attacker, defencer) {
 
   this.getPlayerNewHp(attacker, defencer);
+
+  //var result = attacker.getExistDamageText();
+
   var result = attacker.occupation + attacker.name + attacker.getWeaponMosaic() +
                '攻击了' + defencer.occupation + defencer.name + ',';
 
@@ -38,7 +41,7 @@ PlayerPk.prototype.pkText = function(attacker, defencer) {
   result += defencer.name + '受到了' + this.calculateDamage(attacker, defencer) +
                '点伤害，';
 
-  result += defencer.getSpecialDamageText();
+  result += defencer.getSpecialDamageText();//
 
   result += defencer.name + '剩余生命：' + defencer.hp;
 
