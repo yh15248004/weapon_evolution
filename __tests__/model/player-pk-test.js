@@ -3,6 +3,7 @@ jest.dontMock('../../src/model/player');
 jest.dontMock('../../src/model/soldier');
 jest.dontMock('../../src/model/weapon');
 jest.dontMock('../../src/model/armor');
+jest.dontMock('../../src/model/effect');
 
 var Effect = require('../../src/model/effect');
 var Player = require('../../src/model/player');
@@ -22,7 +23,7 @@ describe('PlayerPk', function() {
 
     it('should return correct text', function() {
 
-      qualityStick = new Weapon('优质的木棒', 8);
+      qualityStick = new Weapon('优质的木棒', 8, new Effect('致命一击', 1));
       bronzeArmor = new Armor('青铜铠甲', 4);
       playerOne = new Soldier('张三', '战士', 50, 9, qualityStick, bronzeArmor);
       playerTwo = new Player('李四', '普通人', 49, 8);
