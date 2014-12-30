@@ -25,8 +25,6 @@ describe('PlayerPk', function() {
 
     it('should return correct text', function() {
 
-
-
       var result = playerPk.pk();
       expect(result).toBe(
         '普通人李四攻击了战士张三,张三受到了4点伤害，张三剩余生命：46\n' +
