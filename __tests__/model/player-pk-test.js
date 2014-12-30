@@ -49,7 +49,6 @@ describe('PlayerPk', function() {
       playerPk.calculateDamage = jest.genMockFn();
       playerPk.calculateDamage.mockReturnValue(51);
 
-      //playerPk = new PlayerPk(playerOne, playerTwo);
       var result = playerPk.pkText(playerOne, playerTwo);
 
       expect(result).toBe(
