@@ -8,14 +8,14 @@ PlayerPk.prototype.pk = function() {
 
   while(true) {
 
-    message += this.pkText(this.playerTwo, this.playerOne);
+    message += this.pkText(this.playerTwo, this.playerOne) + '\n';
 
     if (this.playerOne.hp <= 0) {
       message += this.playerOne.name + '被打败了！';
       break;
     }
 
-    message += this.pkText(this.playerOne, this.playerTwo);
+    message += this.pkText(this.playerOne, this.playerTwo) + '\n';
 
     if (this.playerTwo.hp <= 0) {
       message += this.playerTwo.name + '被打败了！';
@@ -36,7 +36,7 @@ PlayerPk.prototype.pkText = function(attacker, defencer) {
   result += attacker.getSpecialAttrackText();
 
   result += defencer.name + '受到了' + this.calculateDamage(attacker, defencer) +
-               '点伤害，' + defencer.name + '剩余生命：' + defencer.hp + '\n';
+               '点伤害，' + defencer.name + '剩余生命：' + defencer.hp;
 
   return result;
 };
