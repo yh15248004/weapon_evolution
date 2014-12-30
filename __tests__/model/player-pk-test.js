@@ -16,7 +16,7 @@ describe('PlayerPk', function() {
 
   describe('#pk()', function() {
 
-    it('should return correct text', function() {
+    it('should return correct critical', function() {
 
       qualityStick = new Weapon('优质的木棒', 8, new Effect('致命一击', 1));
       bronzeArmor = new Armor('青铜铠甲', 4);
@@ -28,6 +28,27 @@ describe('PlayerPk', function() {
       expect(result).toBe(
         '普通人李四攻击了战士张三,张三受到了4点伤害，张三剩余生命：46\n' +
         '战士张三用优质的木棒攻击了普通人李四,张三发动了致命一击,李四受到了51点伤害，李四剩余生命：-1\n' +
+        '李四被打败了！'
+      );
+
+    });
+
+    it('should return correct poisoning', function() {
+
+      qualityStick = new Weapon('优质的毒剑', 8, new Effect('中毒', 1));
+      bronzeArmor = new Armor('青铜铠甲', 4);
+      playerOne = new Soldier('张三', '战士', 50, 9, qualityStick, bronzeArmor);
+      playerTwo = new Player('李四', '普通人', 50, 8);
+      playerPk = new PlayerPk(playerOne, playerTwo);
+
+      var result = playerPk.pk();
+      expect(result).toBe(
+        '普通人李四攻击了战士张三,张三受到了4点伤害，张三剩余生命：46\n' +
+        '战士张三用优质的毒剑攻击了普通人李四,李四受到了17点伤害，李四中毒了,李四剩余生命：33\n' +
+        '普通人李四攻击了战士张三,张三受到了4点伤害，张三剩余生命：42\n' +
+        '战士张三用优质的毒剑攻击了普通人李四,李四受到了17点伤害，李四中毒了,李四剩余生命：16\n' +
+        '普通人李四攻击了战士张三,张三受到了4点伤害，张三剩余生命：38\n' +
+        '战士张三用优质的毒剑攻击了普通人李四,李四受到了17点伤害，李四中毒了,李四剩余生命：-1\n' +
         '李四被打败了！'
       );
 
