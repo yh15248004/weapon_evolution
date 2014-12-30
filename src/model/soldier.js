@@ -24,7 +24,11 @@ Soldier.prototype.getArmorDef = function() {
 };
 
 Soldier.prototype.getAttackPoint = function() {
-  return this.weapon.attack + this.attack;
+  var attackTotal = this.weapon.attack + this.attack;
+  if (this.weapon.isTrigger()) {
+    attackTotal = (this.weapon.attack + this.attack) * 3;
+  }
+  return attackTotal;
 };
 
 Soldier.prototype.getDefPoint = function() {
