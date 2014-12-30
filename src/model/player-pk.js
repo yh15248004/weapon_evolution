@@ -41,7 +41,7 @@ PlayerPk.prototype.pkText = function(attacker, defencer) {
   result += defencer.name + '受到了' + this.calculateDamage(attacker, defencer) +
                '点伤害，';
 
-  result += defencer.getSpecialDamageText();//
+  result += this.getSpecialDamageText(attacker, defencer);
 
   result += defencer.name + '剩余生命：' + defencer.hp;
 
@@ -54,6 +54,10 @@ PlayerPk.prototype.getPlayerNewHp = function(attacker, defencer) {
 
 PlayerPk.prototype.calculateDamage = function(attacker, defencer) {
   return attacker.getAttackPoint() - defencer.getDefPoint();
+};
+
+PlayerPk.prototype.getSpecialDamageText = function(attacker, defencer) {
+  return '';
 };
 
 module.exports = PlayerPk;

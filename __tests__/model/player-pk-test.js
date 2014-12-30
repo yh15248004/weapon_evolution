@@ -64,8 +64,8 @@ describe('PlayerPk', function() {
       playerOne = new Soldier('张三', '战士', 50, 9, qualityStick, bronzeArmor);
       playerTwo = new Player('李四', '普通人', 49, 8);
 
-      playerTwo.getSpecialDamageText = jest.genMockFn();
-      playerTwo.getSpecialDamageText.mockReturnValue('李四中毒了,');
+      playerPk.getSpecialDamageText = jest.genMockFn();
+      playerPk.getSpecialDamageText.mockReturnValue('李四中毒了,');
 
       playerPk.calculateDamage = jest.genMockFn();
       playerPk.calculateDamage.mockReturnValue(51);
