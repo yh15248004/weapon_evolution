@@ -28,7 +28,7 @@ PlayerPk.prototype.pk = function() {
 };
 
 PlayerPk.prototype.pkText = function(attacker, defencer) {
-  
+
   this.getPlayerNewHp(attacker, defencer);
   var result = attacker.occupation + attacker.name + attacker.getWeaponMosaic() +
                '攻击了' + defencer.occupation + defencer.name + ',';

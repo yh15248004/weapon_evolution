@@ -40,9 +40,12 @@ Soldier.prototype.getWeaponMosaic = function() {
 };
 
 Soldier.prototype.getSpecialAttrackText = function() {
+  var result = '';
+  if (this.weapon.isTrigger()) {
+    result = this.name + '发动了' + this.weapon.effect.name + ',';
+  }
 
-
-  return '';
+  return result;
 
 };
 
