@@ -42,24 +42,4 @@ describe('PlayerPk', function() {
 
   });
 
-  describe('#getPlayerOneNewHp()', function() {
-    it('should return correct hp', function() {
-
-      var result = playerPk.getPlayerOneNewHp();
-
-      expect(result).toEqual(46);
-
-    });
-  });
-
-  describe('#getPlayerTwoNewHp()', function() {
-    it('should return correct hp', function() {
-
-      var result = playerPk.getPlayerTwoNewHp();
-
-      expect(result).toEqual(32);
-
-    });
-  });
-
 });

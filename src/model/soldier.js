@@ -31,4 +31,8 @@ Soldier.prototype.getDefPoint = function() {
   return this.armor.def;
 };
 
+Soldier.prototype.getWeaponMosaic = function() {
+  return '用' + this.weapon.name;
+};
+
 module.exports = Soldier;

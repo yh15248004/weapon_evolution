@@ -31,4 +31,8 @@ Player.prototype.getDefPoint = function() {
   return 0;
 };
 
+Player.prototype.getWeaponMosaic = function() {
+  return '';
+};
+
 module.exports = Player;
