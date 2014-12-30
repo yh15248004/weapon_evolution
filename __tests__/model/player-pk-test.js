@@ -45,8 +45,8 @@ describe('PlayerPk', function() {
 
       var result = playerPk.pkTexts();
 
-      expect(result).toEqual(['普通人李四攻击了战士张三,张三受到了4点伤害，张三剩余生命：',
-                           '战士张三用优质的木棒攻击了普通人李四,李四受到了17点伤害，李四剩余生命：']);
+      expect(result).toEqual(['普通人李四攻击了战士张三,张三受到了4点伤害，张三剩余生命：50\n',
+                           '战士张三用优质的木棒攻击了普通人李四,李四受到了17点伤害，李四剩余生命：49\n']);
 
     });
   });
