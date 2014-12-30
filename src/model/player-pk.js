@@ -57,7 +57,11 @@ PlayerPk.prototype.calculateDamage = function(attacker, defencer) {
 };
 
 PlayerPk.prototype.getSpecialDamageText = function(attacker, defencer) {
-  return '';
+  var result = '';
+  if (attacker.getIsPoisoning()) {
+    result = defencer.name + '中毒了,';
+  }
+  return result;
 };
 
 module.exports = PlayerPk;

@@ -53,4 +53,12 @@ Soldier.prototype.getSpecialDamageText = function() {
   return '';
 };
 
+Soldier.prototype.getIsPoisoning = function() {
+  var result = false;
+  if (this.weapon.isPoisoning()) {
+    result = true;
+  }
+  return result;
+};
+
 module.exports = Soldier;

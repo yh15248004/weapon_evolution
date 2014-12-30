@@ -20,4 +20,14 @@ Weapon.prototype.isTrigger = function() {
   return result;
 };
 
+Weapon.prototype.isPoisoning = function() {
+  var result = false;
+
+  if (this.effect.probability * 100 > _.random(0, 99) && this.effect.name === '中毒') {
+    result = true;
+  }
+
+  return result;
+};
+
 module.exports = Weapon;

@@ -57,7 +57,7 @@ describe('PlayerPk', function() {
 
     });
 
-    it('should return correct zhongdu', function() {
+    it('should return correct poisoning', function() {
 
       qualityStick = new Weapon('优质毒剑', 8, new Effect('中毒', 1));
       bronzeArmor = new Armor('青铜铠甲', 4);

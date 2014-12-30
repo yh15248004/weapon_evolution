@@ -41,4 +41,34 @@ describe('Soldier', function() {
 
   });
 
+  describe('#getIsPoisoning()', function() {
+
+    it('should return correct boolean', function() {
+      var qualityStick = new Weapon('优质毒剑', 2, new Effect('中毒', 1));
+      var bronzeArmor = new Armor('青铜铠甲', 4);
+      var soldier = new Soldier('张三', '战士', 50, 8, qualityStick, bronzeArmor);
+
+      qualityStick.isPoisoning = jest.genMockFn();
+      qualityStick.isPoisoning.mockReturnValue(true);
+
+      var result = soldier.getIsPoisoning();
+
+      expect(result).toBe(true);
+    });
+
+    it('should return correct boolean', function() {
+      var qualityStick = new Weapon('优质毒剑', 2, new Effect('中毒', 1));
+      var bronzeArmor = new Armor('青铜铠甲', 4);
+      var soldier = new Soldier('张三', '战士', 50, 8, qualityStick, bronzeArmor);
+
+      qualityStick.isPoisoning = jest.genMockFn();
+      qualityStick.isPoisoning.mockReturnValue(false);
+
+      var result = soldier.getIsPoisoning();
+
+      expect(result).toBe(false);
+    });
+
+  });
+
 });

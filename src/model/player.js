@@ -43,4 +43,8 @@ Player.prototype.getSpecialDamageText = function() {
   return '';
 };
 
+Player.prototype.getIsPoisoning = function() {
+  return false;
+};
+
 module.exports = Player;
