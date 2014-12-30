@@ -35,4 +35,8 @@ Player.prototype.getWeaponMosaic = function() {
   return '';
 };
 
+Player.prototype.getSpecialAttrackText = function() {  
+  return '';
+};
+
 module.exports = Player;

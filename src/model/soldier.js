@@ -35,4 +35,11 @@ Soldier.prototype.getWeaponMosaic = function() {
   return '用' + this.weapon.name;
 };
 
+Soldier.prototype.getSpecialAttrackText = function() {
+
+
+  return '';
+
+};
+
 module.exports = Soldier;

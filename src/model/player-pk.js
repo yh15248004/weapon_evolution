@@ -8,16 +8,14 @@ PlayerPk.prototype.pk = function() {
 
   while(true) {
 
-    this.getPlayerNewHp(this.playerTwo, this.playerOne);
-    message += this.pkTexts(this.playerTwo, this.playerOne);
+    message += this.pkText(this.playerTwo, this.playerOne);
 
     if (this.playerOne.hp <= 0) {
       message += this.playerOne.name + '被打败了！';
       break;
     }
 
-    this.getPlayerNewHp(this.playerOne,this.playerTwo);
-    message += this.pkTexts(this.playerOne, this.playerTwo);
+    message += this.pkText(this.playerOne, this.playerTwo);
 
     if (this.playerTwo.hp <= 0) {
       message += this.playerTwo.name + '被打败了！';
@@ -29,15 +27,27 @@ PlayerPk.prototype.pk = function() {
   return message;
 };
 
-PlayerPk.prototype.pkTexts = function(attacker, defencer) {
-  return attacker.occupation + attacker.name + attacker.getWeaponMosaic() +
-         '攻击了' + defencer.occupation + defencer.name + ',' + defencer.name +
-         '受到了' + (attacker.getAttackPoint() - defencer.getDefPoint()) +
-         '点伤害，' + defencer.name + '剩余生命：' + defencer.hp + '\n';
+PlayerPk.prototype.pkText = function(attacker, defencer) {
+  var result = attacker.occupation + attacker.name + attacker.getWeaponMosaic() +
+               '攻击了' + defencer.occupation + defencer.name + ',';
+
+  result += attacker.getSpecialAttrackText();
+
+  this.getPlayerNewHp(attacker, defencer);
+
+  result += defencer.name + '受到了' + this.calculateDamage(attacker, defencer) +
+               '点伤害，' + defencer.name + '剩余生命：' + defencer.hp + '\n';
+               
+  return result;
 };
 
 PlayerPk.prototype.getPlayerNewHp = function(attacker, defencer) {
-  defencer.hp -= attacker.getAttackPoint() - defencer.getDefPoint();
+  defencer.hp -= this.calculateDamage(attacker, defencer);
 };
+
+PlayerPk.prototype.calculateDamage = function(attacker, defencer) {
+  return attacker.getAttackPoint() - defencer.getDefPoint();
+};
+
 
 module.exports = PlayerPk;
