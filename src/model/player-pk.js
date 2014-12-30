@@ -8,7 +8,7 @@ PlayerPk.prototype.pk = function() {
 
   while(true) {
 
-    this.playerOne.hp -= this.playerTwo.attack - this.playerOne.getArmorDef();
+    this.playerOne.hp = this.getPlayerOneNewHp();
     message += this.pkTexts()[0];
 
     if (this.playerOne.hp <= 0) {
@@ -16,7 +16,7 @@ PlayerPk.prototype.pk = function() {
       break;
     }
 
-    this.playerTwo.hp -= this.playerOne.attack + this.playerOne.getWeaponAttack();
+    this.playerTwo.hp = this.getPlayerTwoNewHp();
     message += this.pkTexts()[1];
 
     if (this.playerTwo.hp <= 0) {
@@ -44,7 +44,17 @@ PlayerPk.prototype.pkTexts = function() {
   var playerText = [playerOneText, playerTwoText];
 
   return playerText;
-  
+
+};
+
+PlayerPk.prototype.getPlayerOneNewHp = function() {
+  this.playerOne.hp -= this.playerTwo.attack - this.playerOne.getArmorDef();
+  return this.playerOne.hp;
+};
+
+PlayerPk.prototype.getPlayerTwoNewHp = function() {
+  this.playerTwo.hp -= this.playerOne.attack + this.playerOne.getWeaponAttack();
+  return this.playerTwo.hp;
 };
 
 module.exports = PlayerPk;
