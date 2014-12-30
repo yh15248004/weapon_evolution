@@ -35,7 +35,11 @@ Player.prototype.getWeaponMosaic = function() {
   return '';
 };
 
-Player.prototype.getSpecialAttrackText = function() {  
+Player.prototype.getSpecialAttrackText = function() {
+  return '';
+};
+
+Player.prototype.getSpecialDamageText = function() {
   return '';
 };
 

@@ -13,7 +13,7 @@ Weapon.prototype.getWeaponAttack = function() {
 Weapon.prototype.isTrigger = function() {
   var result = false;
 
-  if (this.effect.probability * 100 > _.random(0, 99)) {
+  if (this.effect.probability * 100 > _.random(0, 99) && this.effect.name === '致命一击') {
     result = true;
   }
 

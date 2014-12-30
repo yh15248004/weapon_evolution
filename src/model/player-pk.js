@@ -36,7 +36,11 @@ PlayerPk.prototype.pkText = function(attacker, defencer) {
   result += attacker.getSpecialAttrackText();
 
   result += defencer.name + '受到了' + this.calculateDamage(attacker, defencer) +
-               '点伤害，' + defencer.name + '剩余生命：' + defencer.hp;
+               '点伤害，';
+
+  result += defencer.getSpecialDamageText();
+
+  result += defencer.name + '剩余生命：' + defencer.hp;
 
   return result;
 };

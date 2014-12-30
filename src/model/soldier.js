@@ -49,4 +49,8 @@ Soldier.prototype.getSpecialAttrackText = function() {
 
 };
 
+Soldier.prototype.getSpecialDamageText = function() {
+  return '';
+};
+
 module.exports = Soldier;
