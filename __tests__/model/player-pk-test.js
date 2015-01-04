@@ -89,7 +89,7 @@ describe('PlayerPk', function() {
 
       playerOne.getEffectObject = jest.genMockFn();
       playerOne.getEffectObject.mockReturnValue({
-        isTrigger : true, message : '张三发动了致命一击,', damange : 51
+        isDelay : false, message : '张三发动了致命一击,', damange : 51
       });
       playerPk.calculateDamage = jest.genMockFn();
       playerPk.calculateDamage.mockReturnValue(51);

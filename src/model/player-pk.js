@@ -1,6 +1,7 @@
 function PlayerPk(playerOne, playerTwo) {
   this.playerOne = playerOne;
   this.playerTwo = playerTwo;
+  this.roundResult = null;
 }
 
 PlayerPk.prototype.pk = function() {
@@ -30,23 +31,31 @@ PlayerPk.prototype.pk = function() {
 PlayerPk.prototype.pkText = function(attacker, defencer) {
 
   var effectObject = attacker.getEffectObject();
+  var result = '';
+
+  //if (this.roundResult !== null && this.roundResult.times !== 0 && this.roundResult.defencerName == attacker.name) {
+  //  result += this.roundResult.defencerName + '受到' + this.roundResult.damage + this.roundResult.effect +
+  //  '伤害，' + this.roundResult.defencerName + '剩余生命：' +
+  //  this.getPlayerNewHp(this.roundResult.damage, attacker);
+  //}
 
   this.getPlayerNewHp(effectObject.damange, defencer);
 
-  var result = attacker.occupation + attacker.name + attacker.getWeaponMosaic() +
+  result += attacker.occupation + attacker.name + attacker.getWeaponMosaic() +
                '攻击了' + defencer.occupation + defencer.name + ',';
 
   //result += attacker.getSpecialAttrackText();
-  result += effectObject.message;
+  if (effectObject.isDelay === false) {
+    result += effectObject.message;
+  }
 
   result += defencer.name + '受到了' + this.calculateDamage(effectObject.damange, defencer) +
                '点伤害，';
 
   result += this.getSpecialDamageText(attacker, defencer);
 
-  result += defencer.name + '剩余生命：' + defencer.hp;
 
-  //result += this.getExistDamageText(attacker, defencer);
+  result += defencer.name + '剩余生命：' + defencer.hp;
 
   return result;
 };

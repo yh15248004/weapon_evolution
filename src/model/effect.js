@@ -7,15 +7,20 @@ function Effect(name, probability, attack, times) {
   this.times = times || 0;
 }
 
-Effect.prototype.getEffectHouse = function(attackerName, damange) {
-  var isTrigger = false;
+Effect.prototype.getEffectHouse = function(attackerName, damage) {
+  var isDelay = false;
   var message = '';
   if (this.probability * 100 > _.random(0, 99) && this.name === '致命一击') {
-    isTrigger = true;
     message = attackerName +'发动了' + this.name + ',';
-    damange = damange * 3;
+    damage = damage * 3;
   }
-  return new EffectHouse(isTrigger, message, damange);
+  if (this.probability * 100 > _.random(0, 99) && this.name === '中毒') {
+    isDelay = true;
+    message = '中毒了';
+    damage = this.attack;
+  }
+
+  return new EffectHouse(isDelay, message, damage, this.times);
 };
 
 module.exports = Effect;
