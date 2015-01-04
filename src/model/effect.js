@@ -18,6 +18,10 @@ Effect.prototype.getEffectHouse = function(attackerName, damage) {
     isDelay = true;
     message = '中毒了，';
   }
+  if (this.probability * 100 > _.random(0, 99) && this.name === '火焰') {
+    isDelay = true;
+    message = '着火了，';
+  }
 
   return new EffectHouse(isDelay, message, damage, this.times);
 };

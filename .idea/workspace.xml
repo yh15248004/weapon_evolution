@@ -4,9 +4,6 @@
     <list default="true" id="229ba0de-6e91-4001-9605-70ab10ec7c82" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/effect.js" afterPath="$PROJECT_DIR$/src/model/effect.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__tests__/model/player-pk-test.js" afterPath="$PROJECT_DIR$/__tests__/model/player-pk-test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/player-pk.js" afterPath="$PROJECT_DIR$/src/model/player-pk.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/soldier.js" afterPath="$PROJECT_DIR$/src/model/soldier.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="weapon_evolution.iws" />
@@ -36,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="483">
-              <caret line="8" column="70" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="70" />
+              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -72,21 +69,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="player-pk-test.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="player-pk-test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/__tests__/model/player-pk-test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45969126" vertical-offset="3008" max-vertical-offset="3696">
-              <caret line="156" column="84" selection-start-line="156" selection-start-column="84" selection-end-line="156" selection-end-column="84" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3008" max-vertical-offset="3696">
+              <caret line="151" column="55" selection-start-line="151" selection-start-column="55" selection-end-line="151" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="effect.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="effect.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/effect.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="672">
-              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.67581475" vertical-offset="89" max-vertical-offset="756">
+              <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -146,11 +143,11 @@
         <option value="$PROJECT_DIR$/src/model/player.js" />
         <option value="$PROJECT_DIR$/__tests__/model/soldier-test.js" />
         <option value="$PROJECT_DIR$/src/model/effect-house.js" />
-        <option value="$PROJECT_DIR$/src/main.js" />
-        <option value="$PROJECT_DIR$/src/model/effect.js" />
         <option value="$PROJECT_DIR$/src/model/soldier.js" />
         <option value="$PROJECT_DIR$/src/model/player-pk.js" />
+        <option value="$PROJECT_DIR$/src/model/effect.js" />
         <option value="$PROJECT_DIR$/__tests__/model/player-pk-test.js" />
+        <option value="$PROJECT_DIR$/src/main.js" />
       </list>
     </option>
   </component>
@@ -528,12 +525,12 @@
       <option name="number" value="Default" />
       <updated>1419988175860</updated>
       <workItem from="1420342255343" duration="19315000" />
-      <workItem from="1420379362810" duration="4922000" />
+      <workItem from="1420379362810" duration="5517000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24237000" />
+    <option name="totallyTimeSpent" value="24832000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1346" height="703" extended-state="0" />
@@ -929,52 +926,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/model/effect-test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/effect.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="672">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/soldier.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="1869">
           <caret line="46" column="37" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/weapon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1029">
-          <caret line="1" column="36" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/effect-house.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="483">
-          <caret line="8" column="70" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="70" />
           <folding />
         </state>
       </provider>
@@ -995,10 +950,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/weapon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1029">
+          <caret line="1" column="36" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/__tests__/model/player-pk-test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45969126" vertical-offset="3008" max-vertical-offset="3696">
-          <caret line="156" column="84" selection-start-line="156" selection-start-column="84" selection-end-line="156" selection-end-column="84" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3008" max-vertical-offset="3696">
+          <caret line="151" column="55" selection-start-line="151" selection-start-column="55" selection-end-line="151" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="483">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/effect-house.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/model/effect-test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/effect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67581475" vertical-offset="89" max-vertical-offset="756">
+          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
           <folding />
         </state>
       </provider>
