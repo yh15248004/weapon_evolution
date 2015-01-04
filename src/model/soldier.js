@@ -40,8 +40,13 @@ Soldier.prototype.getEffectObject = function() {
   return this.weapon.effect.getEffectHouse(this.name, this.weapon.attack + this.attack);
 };
 
+Soldier.prototype.getWeaponEffectDamage = function() {
+  return this.weapon.effect.attack;
+};
 
-
+Soldier.prototype.getWeaponEffectName = function() {
+  return this.weapon.effect.name;
+};
 
 
 

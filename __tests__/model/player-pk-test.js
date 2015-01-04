@@ -146,4 +146,25 @@ describe('PlayerPk', function() {
   //
   });
 
+  describe('#getRoundResult()', function() {
+    it('should return correct roundResult', function() {
+
+      qualityStick = new Weapon('利剑', 8, new Effect('中毒', 0.4, 1, 3));
+      bronzeArmor = new Armor('青铜铠甲', 4);
+      playerOne = new Soldier('张三', '战士', 50, 9, qualityStick, bronzeArmor);
+      playerTwo = new Player('李四', '普通人', 49, 8);
+      playerPk = new PlayerPk(playerOne, playerTwo);
+      var effectObject = {isDelay : true, message : 'test', damange : 2, times : 3};
+
+      var result = playerPk.getRoundResult(effectObject, playerOne, playerTwo);
+      expect(result).toEqual({defencerName : '李四',
+        damage : 1,
+        effect : '中毒',
+        times : 3
+      });
+
+    });
+
+  });
+
 });

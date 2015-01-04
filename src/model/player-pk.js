@@ -33,18 +33,18 @@ PlayerPk.prototype.pkText = function(attacker, defencer) {
   var effectObject = attacker.getEffectObject();
   var result = '';
 
-  //if (this.roundResult !== null && this.roundResult.times !== 0 && this.roundResult.defencerName == attacker.name) {
-  //  result += this.roundResult.defencerName + '受到' + this.roundResult.damage + this.roundResult.effect +
-  //  '伤害，' + this.roundResult.defencerName + '剩余生命：' +
-  //  this.getPlayerNewHp(this.roundResult.damage, attacker);
-  //}
-
   this.getPlayerNewHp(effectObject.damange, defencer);
+
+  if (this.roundResult !== null && this.roundResult.defencerName === attacker.name && this.roundResult.times != 0) {
+    result += this.roundResult.defencerName + '受到' + this.roundResult.damage +'点'+ this.roundResult.effect +
+    '伤害，' + this.roundResult.defencerName + '剩余生命：' +
+    this.getPlayerNewHp(this.roundResult.damage, attacker) + '\n';
+    this.roundResult.times --;
+  }
 
   result += attacker.occupation + attacker.name + attacker.getWeaponMosaic() +
                '攻击了' + defencer.occupation + defencer.name + ',';
 
-  //result += attacker.getSpecialAttrackText();
   if (effectObject.isDelay === false) {
     result += effectObject.message;
   }
@@ -52,32 +52,43 @@ PlayerPk.prototype.pkText = function(attacker, defencer) {
   result += defencer.name + '受到了' + this.calculateDamage(effectObject.damange, defencer) +
                '点伤害，';
 
-  result += this.getSpecialDamageText(attacker, defencer);
-
+  if (effectObject.isDelay === true) {
+    result += defencer.name + effectObject.message;
+  }
 
   result += defencer.name + '剩余生命：' + defencer.hp;
+
+  this.roundResult = this.getRoundResult(effectObject, attacker, defencer);
 
   return result;
 };
 
 PlayerPk.prototype.getPlayerNewHp = function(damange, defencer) {
   defencer.hp -= this.calculateDamage(damange, defencer);
+  return defencer.hp;
 };
 
 PlayerPk.prototype.calculateDamage = function(damange, defencer) {
   return damange - defencer.getDefPoint();
 };
 
-PlayerPk.prototype.getSpecialDamageText = function(attacker, defencer) {
-  var result = '';
-  if (attacker.getIsPoisoning()) {
-    result = defencer.name + '中毒了,';
+PlayerPk.prototype.getRoundResult = function(effectObject, attacker, defencer) {
+  var result = this.roundResult;
+  if (effectObject.isDelay === true) {
+    var times = effectObject.times;
+    var damage = attacker.getWeaponEffectDamage();
+    if (this.roundResult !== null && this.roundResult.times !== 0 ) {
+      times = this.roundResult.times;
+      damage = this.roundResult.damage + attacker.getWeaponEffectDamage();
+    }
+    result = {defencerName : defencer.name,
+      damage : damage,
+      effect : attacker.getWeaponEffectName(),
+      times : times
+    }
   }
-  if (attacker.getIsOblaze()) {
-    result = defencer.name + '着火了,';
-  }
-
   return result;
+
 };
 
 module.exports = PlayerPk;
