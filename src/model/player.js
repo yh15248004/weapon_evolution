@@ -35,6 +35,10 @@ Player.prototype.getWeaponMosaic = function() {
   return '';
 };
 
+Player.prototype.getEffectObject = function() {
+  return {damange : this.attack, message : ''};
+};
+
 Player.prototype.getSpecialAttrackText = function() {
   return '';
 };

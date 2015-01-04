@@ -1,3 +1,5 @@
+var _ = require('lodash');
+var EffectHouse = require('./effect-house');
 function Effect(name, probability, attack, times) {
   this.name = name;
   this.probability = probability;
@@ -5,12 +7,12 @@ function Effect(name, probability, attack, times) {
   this.times = times || 0;
 }
 
-Effect.prototype.getEffectHouse = function(player) {
+Effect.prototype.getEffectHouse = function(attackerName, damange) {
   var isTrigger = false;
   var message = '';
   if (this.probability * 100 > _.random(0, 99) && this.name === '致命一击') {
     isTrigger = true;
-    message = player + '发动了' + this.name + ',';
+    message = attackerName +'发动了' + this.name + ',';
     damange = damange * 3;
   }
   return new EffectHouse(isTrigger, message, damange);

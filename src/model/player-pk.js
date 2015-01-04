@@ -29,16 +29,17 @@ PlayerPk.prototype.pk = function() {
 
 PlayerPk.prototype.pkText = function(attacker, defencer) {
 
-  this.getPlayerNewHp(attacker, defencer);
+  var effectObject = attacker.getEffectObject();
 
-  //var result = attacker.getExistDamageText();
+  this.getPlayerNewHp(effectObject.damange, defencer);
 
   var result = attacker.occupation + attacker.name + attacker.getWeaponMosaic() +
                '攻击了' + defencer.occupation + defencer.name + ',';
 
-  result += attacker.getSpecialAttrackText();
+  //result += attacker.getSpecialAttrackText();
+  result += effectObject.message;
 
-  result += defencer.name + '受到了' + this.calculateDamage(attacker, defencer) +
+  result += defencer.name + '受到了' + this.calculateDamage(effectObject.damange, defencer) +
                '点伤害，';
 
   result += this.getSpecialDamageText(attacker, defencer);
@@ -50,12 +51,12 @@ PlayerPk.prototype.pkText = function(attacker, defencer) {
   return result;
 };
 
-PlayerPk.prototype.getPlayerNewHp = function(attacker, defencer) {
-  defencer.hp -= this.calculateDamage(attacker, defencer);
+PlayerPk.prototype.getPlayerNewHp = function(damange, defencer) {
+  defencer.hp -= this.calculateDamage(damange, defencer);
 };
 
-PlayerPk.prototype.calculateDamage = function(attacker, defencer) {
-  return attacker.getAttackPoint() - defencer.getDefPoint();
+PlayerPk.prototype.calculateDamage = function(damange, defencer) {
+  return damange - defencer.getDefPoint();
 };
 
 PlayerPk.prototype.getSpecialDamageText = function(attacker, defencer) {
