@@ -6,7 +6,7 @@ var Weapon = require('./model/weapon');
 var Armor = require('./model/armor');
 
 function weaponEvolution() {
-  var qualityStick = new Weapon('优质的木棒', 4, new Effect('火焰', 0.4, 1, 3));
+  var qualityStick = new Weapon('优质的木棒', 4, new Effect('致命一击', 0.4, 1, 3));
   var bronzeArmor = new Armor('青铜铠甲', 4);
   var playerOne = new Soldier('张三', '战士', 50, 2, qualityStick, bronzeArmor);
   var playerTwo = new Player('李四', '普通人', 49, 7);

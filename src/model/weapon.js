@@ -10,34 +10,5 @@ Weapon.prototype.getWeaponName = function() {
 Weapon.prototype.getWeaponAttack = function() {
   return this.attack;
 };
-Weapon.prototype.isTrigger = function() {
-  var result = false;
-
-  if (this.effect.probability * 100 > _.random(0, 99) && this.effect.name === '致命一击') {
-    result = true;
-  }
-
-  return result;
-};
-
-Weapon.prototype.isPoisoning = function() {
-  var result = false;
-
-  if (this.effect.probability * 100 > _.random(0, 99) && this.effect.name === '中毒') {
-    result = true;
-  }
-
-  return result;
-};
-
-Weapon.prototype.isOblaze = function() {
-  var result = false;
-
-  if (this.effect.probability * 100 > _.random(0, 99) && this.effect.name === '着火') {
-    result = true;
-  }
-
-  return result;
-};
 
 module.exports = Weapon;
