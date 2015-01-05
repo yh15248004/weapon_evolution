@@ -2,6 +2,7 @@ function PlayerPk(playerOne, playerTwo) {
   this.playerOne = playerOne;
   this.playerTwo = playerTwo;
   this.roundResult = null;
+  this.roundTimes = 0;
 }
 
 PlayerPk.prototype.pk = function() {
@@ -33,14 +34,25 @@ PlayerPk.prototype.pkText = function(attacker, defencer) {
   var effectObject = attacker.getEffectObject();
   var result = '';
 
-  this.getPlayerNewHp(effectObject.damange, defencer);
-
-  if (this.roundResult !== null && this.roundResult.defencerName === attacker.name && this.roundResult.times != 0) {
+  if (this.roundResult !== null && this.roundResult.defencerName === attacker.name && this.roundResult.times !== 0 &&
+      (this.roundResult.effect === '中毒' || this.roundResult.effect === '火焰')) {
     result += this.roundResult.defencerName + '受到' + this.roundResult.damage +'点'+ this.roundResult.effect +
     '伤害，' + this.roundResult.defencerName + '剩余生命：' +
     this.getPlayerNewHp(this.roundResult.damage, attacker) + '\n';
     this.roundResult.times --;
   }
+
+  if (this.roundResult !== null && this.roundResult.effect === '冰冻' && this.roundResult.times !== 0 &&
+      this.roundResult.defencerName === attacker.name) {
+    this.roundTimes --;
+    if (this.roundTimes % 3 === 0) {
+      result += attacker.name + '冻得直哆嗦，没有击中' + defencer.name;
+      return result;
+    }
+
+  }
+
+  this.getPlayerNewHp(effectObject.damange, defencer);
 
   result += attacker.occupation + attacker.name + attacker.getWeaponMosaic() +
                '攻击了' + defencer.occupation + defencer.name + ',';
@@ -50,7 +62,7 @@ PlayerPk.prototype.pkText = function(attacker, defencer) {
   }
 
   result += defencer.name + '受到了' + this.calculateDamage(effectObject.damange, defencer) +
-               '点伤害，';
+            '点伤害，';
 
   if (effectObject.isDelay === true) {
     result += defencer.name + effectObject.message;
@@ -59,6 +71,7 @@ PlayerPk.prototype.pkText = function(attacker, defencer) {
   result += defencer.name + '剩余生命：' + defencer.hp;
 
   this.roundResult = this.getRoundResult(effectObject, attacker, defencer);
+  this.getRoundTimes(effectObject);
 
   return result;
 };
@@ -88,7 +101,12 @@ PlayerPk.prototype.getRoundResult = function(effectObject, attacker, defencer) {
     }
   }
   return result;
+};
 
+PlayerPk.prototype.getRoundTimes = function(effectObject) {
+  if (effectObject.message === '冻僵了，') {
+    this.roundTimes += 3;
+  }
 };
 
 module.exports = PlayerPk;
