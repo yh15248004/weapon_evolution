@@ -13,8 +13,11 @@ Soldier.prototype.attack = function(defender) {
     var result = '';
 
     defender.hp -= this.getAttackPoint(defender.getDefensePoint());
+
     result += this.occupation + this.name + '用' + this.weapon.name + '攻击了' + defender.occupation + defender.name +
-              ',' + defender.name + '受到了' + this.getAttackPoint(defender.getDefensePoint()) + '点伤害,' + defender.name + '剩余生命：' +
+              ',';
+    
+    result += defender.name + '受到了' + this.getAttackPoint(defender.getDefensePoint()) + '点伤害,' + defender.name + '剩余生命：' +
               defender.hp + '\n';
 
     if (defender.hp <= 0) {

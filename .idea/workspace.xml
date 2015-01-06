@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229ba0de-6e91-4001-9605-70ab10ec7c82" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__tests__/model/player-pk-test.js" afterPath="$PROJECT_DIR$/__tests__/model/player-pk-test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/player-pk.js" afterPath="$PROJECT_DIR$/src/model/player-pk.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/soldier.js" afterPath="$PROJECT_DIR$/src/model/soldier.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -55,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/__tests__/model/soldier-test.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -81,6 +78,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="player-pk.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/player-pk.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="903">
+              <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="armor-test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/__tests__/model/armor-test.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -91,31 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="state.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/state.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="soldier.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="soldier.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/soldier.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="861">
-              <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="player-pk.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/model/player-pk.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.23274478" vertical-offset="145" max-vertical-offset="903">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.3442623" vertical-offset="168" max-vertical-offset="924">
+              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -140,11 +127,11 @@
         <option value="$PROJECT_DIR$/src/model/armor.js" />
         <option value="$PROJECT_DIR$/__tests__/model/soldier-test.js" />
         <option value="$PROJECT_DIR$/__tests__/model/player-test.js" />
-        <option value="$PROJECT_DIR$/src/model/soldier.js" />
         <option value="$PROJECT_DIR$/src/model/player.js" />
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/model/player-pk.js" />
         <option value="$PROJECT_DIR$/__tests__/model/player-pk-test.js" />
+        <option value="$PROJECT_DIR$/src/model/soldier.js" />
       </list>
     </option>
   </component>
@@ -525,12 +512,12 @@
       <workItem from="1420342255343" duration="19315000" />
       <workItem from="1420379362810" duration="6111000" />
       <workItem from="1420420025067" duration="24291000" />
-      <workItem from="1420506605353" duration="22057000" />
+      <workItem from="1420506605353" duration="28847000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71774000" />
+    <option name="totallyTimeSpent" value="78564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="743" extended-state="6" />
@@ -912,30 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/state.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/model/armor-test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="126">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/model/effect-test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="126">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/__tests__/model/player-test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.64044946" vertical-offset="0" max-vertical-offset="630">
@@ -952,14 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/soldier.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="250" max-vertical-offset="861">
-          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/player.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="777">
@@ -968,10 +923,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/model/soldier-test.js">
+    <entry file="file://$PROJECT_DIR$/src/model/state.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.06741573" vertical-offset="0" max-vertical-offset="623">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/model/armor-test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="126">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -984,10 +947,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/model/effect-test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="126">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/model/soldier-test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/player-pk.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.23274478" vertical-offset="145" max-vertical-offset="903">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="903">
+          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/soldier.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3442623" vertical-offset="168" max-vertical-offset="924">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
           <folding />
         </state>
       </provider>
