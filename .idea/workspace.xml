@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229ba0de-6e91-4001-9605-70ab10ec7c82" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/state.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__tests__/model/armor-test.js" afterPath="$PROJECT_DIR$/__tests__/model/armor-test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/armor.js" afterPath="$PROJECT_DIR$/src/model/armor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/effect-house.js" afterPath="$PROJECT_DIR$/src/model/effect-house.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__tests__/model/effect-test.js" afterPath="$PROJECT_DIR$/__tests__/model/effect-test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/effect.js" afterPath="$PROJECT_DIR$/src/model/effect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__tests__/model/player-pk-test.js" afterPath="$PROJECT_DIR$/__tests__/model/player-pk-test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/player-pk.js" afterPath="$PROJECT_DIR$/src/model/player-pk.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__tests__/model/player-test.js" afterPath="$PROJECT_DIR$/__tests__/model/player-test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/player.js" afterPath="$PROJECT_DIR$/src/model/player.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__tests__/model/soldier-test.js" afterPath="$PROJECT_DIR$/__tests__/model/soldier-test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/soldier.js" afterPath="$PROJECT_DIR$/src/model/soldier.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__tests__/model/weapon-test.js" afterPath="$PROJECT_DIR$/__tests__/model/weapon-test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/weapon.js" afterPath="$PROJECT_DIR$/src/model/weapon.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="weapon_evolution.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,18 +50,8 @@
       <file leaf-file-name="soldier-test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/__tests__/model/soldier-test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65409833" vertical-offset="0" max-vertical-offset="630">
-              <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="player-test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/__tests__/model/player-test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="126">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.3786885" vertical-offset="0" max-vertical-offset="630">
+              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -545,12 +521,12 @@
       <workItem from="1420342255343" duration="19315000" />
       <workItem from="1420379362810" duration="6111000" />
       <workItem from="1420420025067" duration="24291000" />
-      <workItem from="1420506605353" duration="15180000" />
+      <workItem from="1420506605353" duration="15366000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64897000" />
+    <option name="totallyTimeSpent" value="65083000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="743" extended-state="6" />
@@ -1006,8 +982,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/__tests__/model/soldier-test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65409833" vertical-offset="0" max-vertical-offset="630">
-          <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.3786885" vertical-offset="0" max-vertical-offset="630">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
           <folding />
         </state>
       </provider>

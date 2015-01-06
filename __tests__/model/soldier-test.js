@@ -9,7 +9,7 @@ describe('Soldier', function() {
     var qualityStick, bronzeArmor, playerOne, playerTwo;
     describe('#attack()', function() {
 
-        it('should return correct text', function() {
+        it('should return attacker attactText correct', function() {
             qualityStick = new Weapon('优质的木棒', 8);
             bronzeArmor = new Armor('青铜铠甲', 4);
             playerOne = new Soldier('张三', '战士', 50, 9, qualityStick, bronzeArmor);
