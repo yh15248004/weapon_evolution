@@ -26,7 +26,7 @@ Soldier.prototype.attack = function(defender) {
 };
 
 Soldier.prototype.getAttackPoint = function(defenderPoint) {
-    return this.attackPoint + this.weapon.attackPoint + defenderPoint;
+    return this.attackPoint + this.weapon.attackPoint - defenderPoint;
 };
 
 Soldier.prototype.getDefensePoint = function() {
