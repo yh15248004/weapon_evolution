@@ -1,14 +1,7 @@
-var _ = require('lodash');
-function Weapon(name, attack, effect) {
-  this.name = name;
-  this.attack = attack;
-  this.effect = effect || null;
+function Weapon(name, attackPoint, effects) {
+    this.name = name;
+    this.attackPoint = attackPoint;
+    this.effects = effects || [];
 }
-Weapon.prototype.getWeaponName = function() {
-  return this.name;
-};
-Weapon.prototype.getWeaponAttack = function() {
-  return this.attack;
-};
 
 module.exports = Weapon;

@@ -1,83 +1,29 @@
 var Player = require('./player');
-function Soldier (name, occupation, hp, attack, weapon, armor) {
-  Player.call(this, name, occupation, hp, attack, weapon, armor);
 
+function Soldier(name, occupation, hp, attackPoint, weapon, armor, state) {
+    Player.call(this, name, occupation, hp, attackPoint, state);
+    this.weapon = weapon || null;
+    this.armor = armor || null;
 }
 
 Soldier.prototype = Object.create(Player.prototype);
 Soldier.prototype.constructor = Soldier;
 
-Soldier.prototype.getWeaponName = function() {
-  return this.weapon.name;
-};
+Soldier.prototype.attack = function(defender) {
+    var result = '';
+    defender.hp -= this.getAttackPoint();
+    result += this.occupation + this.name + '用' + this.weapon.name + '攻击了' + defender.occupation + defender.name +
+              ',' + defender.name + '受到了' + this.getAttackPoint() + '点伤害,' + defender.name + '剩余生命：' +
+              defender.hp + '\n';
 
-Soldier.prototype.getWeaponAttack = function() {
-  return this.weapon.attack;
-};
+    if (defender.hp <= 0) {
+        result += defender.name + '被打败了。';
+    }
+    return result;
 
-Soldier.prototype.getArmorName = function() {
-  return this.armor.name;
-};
-
-Soldier.prototype.getArmorDef = function() {
-  return this.armor.def;
 };
 
 Soldier.prototype.getAttackPoint = function() {
-  var attackTotal = this.weapon.attack + this.attack;
-  return attackTotal;
+    return this.attackPoint + this.weapon.attackPoint;
 };
-
-Soldier.prototype.getDefPoint = function() {
-  return this.armor.def;
-};
-
-Soldier.prototype.getWeaponMosaic = function() {
-  return '用' + this.weapon.name;
-};
-
-Soldier.prototype.getEffectObject = function() {
-  return this.weapon.effect.getEffectHouse(this.name, this.weapon.attack + this.attack);
-};
-
-Soldier.prototype.getWeaponEffectDamage = function() {
-  return this.weapon.effect.attack;
-};
-
-Soldier.prototype.getWeaponEffectName = function() {
-  return this.weapon.effect.name;
-};
-
-
-
-Soldier.prototype.getSpecialAttrackText = function() {
-  var result = '';
-  if (this.weapon.isTrigger()) {
-    result = this.name + '发动了' + this.weapon.effect.name + ',';
-  }
-
-  return result;
-
-};
-
-Soldier.prototype.getSpecialDamageText = function() {
-  return '';
-};
-
-Soldier.prototype.getIsPoisoning = function() {
-  var result = false;
-  if (this.weapon.isPoisoning()) {
-    result = true;
-  }
-  return result;
-};
-
-Soldier.prototype.getIsOblaze = function() {
-  var result = false;
-  if (this.weapon.isOblaze()) {
-    result = true;
-  }
-  return result;
-};
-
 module.exports = Soldier;

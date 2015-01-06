@@ -1,14 +1,5 @@
-function Armor(name, def) {
+function Armor(name, defensePoint) {
   this.name = name;
-  this.def = def;
+  this.defensePoint = defensePoint;
 }
-
-Armor.prototype.getArmorName = function() {
-  return this.name;
-};
-
-Armor.prototype.getArmorDef = function() {
-  return this.def;
-};
-
 module.exports = Armor;
