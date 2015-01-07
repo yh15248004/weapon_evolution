@@ -21,6 +21,14 @@ Player.prototype.attack = function(defender) {
 
 };
 
+Player.prototype.alive = function() {
+    var result = true;
+    if (this.hp <= 0) {
+        result = false;
+    }
+    return result;
+};
+
 Player.prototype.getAttackPoint = function(defenderPoint) {
     return this.attackPoint - defenderPoint;
 };

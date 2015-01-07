@@ -20,19 +20,24 @@ PlayerPk.prototype.pk = function() {
 
 PlayerPk.prototype.roundText = function(playerOne, playerTwo) {
     var result = '';
-    result += playerOne.attack(playerTwo) + '\n';
-    if (playerTwo.hp <= 0) {
-        result += '';
+
+    result += playerOne.state.impact(playerOne);
+
+    if (!playerOne.alive()) {
+        return result;
+    }
+    result += playerOne.attack(playerTwo);
+
+    result += playerTwo.state.impact(playerOne);
+
+    if (!playerTwo.alive()) {
         return result;
     }
 
-    result += playerTwo.attack(playerOne) + '\n';
-    if (playerOne.hp <= 0) {
-        result += '';
-        return result;
-    }
+    result += playerTwo.attack(playerOne);
 
     return result;
+
 };
 
 module.exports = PlayerPk;

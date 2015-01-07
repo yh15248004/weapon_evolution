@@ -14,6 +14,7 @@ Soldier.prototype.attack = function(defender) {
 
     var activedEffect = this.weapon.effects[0].getActivedEffect();
 
+
     //defender.hp -= this.getAttackPoint(defender.getDefensePoint());
     //
     //result += this.occupation + this.name + '用' + this.weapon.name + '攻击了' + defender.occupation + defender.name +
@@ -28,6 +29,14 @@ Soldier.prototype.attack = function(defender) {
 
     return result;
 
+};
+
+Soldier.prototype.alive = function() {
+    var result = true;
+    if (this.hp <= 0) {
+        result = false;
+    }
+    return result;
 };
 
 Soldier.prototype.getAttackPoint = function(defenderPoint) {
