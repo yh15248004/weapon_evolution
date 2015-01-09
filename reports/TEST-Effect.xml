@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="Effect" errors="0" tests="0" failures="0" time="0" timestamp="2015-01-09T16:48:00">
+</testsuite>
+<testsuite name="Effect.deadly attack effect" errors="0" tests="3" failures="0" time="0.006" timestamp="2015-01-09T16:48:00">
+  <testcase classname="Effect.deadly attack effect" name="soldier with weapon vs soldier with armor trigger effect attack string" time="0.004"></testcase>
+  <testcase classname="Effect.deadly attack effect" name="soldier with weapon vs soldier no armor trigger effect attack string" time="0.001"></testcase>
+  <testcase classname="Effect.deadly attack effect" name="soldier with weapon vs soldier with armor trigger effect attack string" time="0"></testcase>
+</testsuite>
+<testsuite name="Effect.poison effect" errors="0" tests="0" failures="0" time="0" timestamp="2015-01-09T16:48:00">
+</testsuite>
+<testsuite name="Effect.poison effect.trigger string" errors="0" tests="2" failures="0" time="0.001" timestamp="2015-01-09T16:48:00">
+  <testcase classname="Effect.poison effect.trigger string" name="attack soldier with armor trigger effect attack string" time="0"></testcase>
+  <testcase classname="Effect.poison effect.trigger string" name="attack normal person with armor trigger effect attack string" time="0.001"></testcase>
+</testsuite>
+<testsuite name="Effect.fire effect" errors="0" tests="0" failures="0" time="0" timestamp="2015-01-09T16:48:00">
+</testsuite>
+<testsuite name="Effect.fire effect.trigger string" errors="0" tests="2" failures="0" time="0" timestamp="2015-01-09T16:48:00">
+  <testcase classname="Effect.fire effect.trigger string" name="attack soldier with armor trigger effect attack string" time="0"></testcase>
+  <testcase classname="Effect.fire effect.trigger string" name="attack normal person with armor trigger effect attack string" time="0"></testcase>
+</testsuite>
+</testsuites>
